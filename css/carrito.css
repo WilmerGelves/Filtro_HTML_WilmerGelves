@@ -80,7 +80,7 @@ img{
     border: 1px solid rgb(231, 231, 231);
     border-radius: 15px;
     display: grid;
-    grid-template-columns: repeat(6,1fr);
+    grid-template-columns: repeat(5,1fr)100px;
     align-content: space-around;
     align-items:center;
     gap: 40px;
