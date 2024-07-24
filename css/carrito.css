@@ -18,8 +18,8 @@ body{
     align-items: flex-start;
     gap: 80px;
     text-align: center;
-    width: 35%;
-    padding: 0 0 0 50px; 
+    width: 15%;
+    padding: 50px ;
     background-color: rgb(226, 225, 225);
 }
 .nav-bar__item{
@@ -28,6 +28,7 @@ body{
     justify-content: flex-start;
     align-items: flex-start;
     gap: 30px;
+    text-align: left;
 }
 span{
     display: inline-block;
@@ -50,12 +51,8 @@ a,img{
     display: inline-block;
 }
 img{
-    max-width: 200px;
-    max-height: 300px;
-}
-.problem{
-    max-width: 200px;
-    max-height: 300px;
+    max-width: 100px;
+    max-height: 200px;
 }
 
 /*principal*/
@@ -68,50 +65,156 @@ img{
 }
 .main h2{
     font-size: 1.3em;
-    font-weight: normal;
+    font-weight: bolder;
+    margin-left: 10px;
 }
 .cotainer-products{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap:wrap;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
     gap: 30px;
-}
-.product-item{
-    width: 100%;
-    border: 1px solid rgb(231, 231, 231);
-    border-radius: 15px;
-    max-width: 220px;
-    max-height: 400px;
     box-sizing: border-box;
-    margin-bottom: 30px;
+    padding: 20px 20px;
 }
 
+.product-item{
+    border: 1px solid rgb(231, 231, 231);
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.box-img{
+    min-width: 100%;
+    text-align: center;
+}
 .text-product{
     box-sizing: border-box;
     width: 100%;
-    border: 1px solid grey;
     border-radius: 10px;
-    background-color:rgb(231, 231, 231);
     font-size: small;
-    padding-left: 5px;
-    padding-bottom: 10px;
+    padding: 0 5px 10px 10px;
+    text-align:left;
 }
-
-.text-product button{
-    padding: 10px 20px;
-    border-radius: 10px;
-    border: none;
-    background-color: rgb(112, 117, 211);
-    font-weight: bold;
-}
-.text-product button:hover{
-    cursor: pointer;
-    scale: 1.05;
-    background-color:rgb(61, 69, 212); 
-}
-
-
-@media (max-width: 498px){
     
+.text-product p:nth-child(2){
+    text-decoration:underline;
+}
+
+/*Seccion botones*/
+.button-inferior{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+.btn{
+    padding: 10px 10px;
+    background-color:rgb(150, 153, 218) ;
+    border: none;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition-property: all;
+    transition-duration: .5s;
+}
+.btn:hover{
+    background-color: rgb(61, 69, 212);
+}
+.compra{
+   display: flex;
+   justify-content: space-between;
+  align-items: center;
+  border: 2px solid rgb(231, 231, 231);
+  width: 20%;
+  padding: 5px 20px;
+  border-radius: 15px;
+  background-color:rgb(231, 231, 231) ;
+}
+
+@media (max-width: 430px){
+    /*Navegacion*/
+.principal{
+    display: flex;
+    justify-content: flex-start;
+    height: 100vh;
+}
+.nav-bar{
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: flex-start;
+    gap: 50px;
+    text-align: center;
+    width: 30%;
+    padding: 20px 40px; 
+    background-color: rgb(226, 225, 225);
+    height: 100vh;
+}
+
+/*principal*/
+.main{
+    border:2px solid rgb(196, 196, 196);
+    margin: 20px 20px;
+    border-radius: 15px;
+    padding: 5px;
+    overflow-y: scroll;
+}
+.main h2{
+    font-size: 1.3em;
+    font-weight: bolder;
+    margin-left: 10px;
+}
+.cotainer-products{
+    padding: 0;
+    grid-template-columns: repeat(1,1fr);
+    width: 50%;
+}
+
+
+
+.product-item{
+    border: 1px solid rgb(231, 231, 231);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-align:center;
+    padding: 20px;
+}
+
+.box-img{
+    min-width: 100%;
+    text-align: center;
+}
+.text-product,.box-img,.cantidad,.precio,.subtotal{
+    width: 100%;
+}
+    
+
+/*Seccion botones*/
+.button-inferior{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.compra{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid rgb(231, 231, 231);
+    width: 50%;
+    gap: 20px;
+    padding: 5px 15px;
+    border-radius: 15px;
+    background-color:rgb(231, 231, 231) ;
+ } 
 }
